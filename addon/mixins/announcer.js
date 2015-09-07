@@ -5,13 +5,11 @@ export default Ember.Mixin.create({
   didTransition() {
     this._super(...arguments);
 
-    if(!Ember.testing) {
-      setTimeout(() => {
-        let pageTitle = Ember.$('title').html().trim();
-        let message = `${pageTitle} has loaded`;
+    Ember.run.later(this, () => {
+      let pageTitle = Ember.$('title').html().trim();
+      let message = `${pageTitle} has loaded`;
 
-        this.get('announcer').announce(message, 'polite');
-      }, 200);
-    }
+      this.get('announcer').announce(message, 'polite');
+    }, 100);
   }
 });
