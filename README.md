@@ -11,6 +11,12 @@ var Router = Ember.Router.extend(A11yAnnouncer, {...});
 ```
 - Add `{{route-announcer}}` to your `application.hbs` file
 
+
+#### TODO
+- [] Fill out readme
+- [] Write tests
+- [] Document how to push changes to the live region for things other than routes
+
 ## Installation
 
 * `git clone` this repository

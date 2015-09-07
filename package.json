@@ -1,7 +1,7 @@
 {
   "name": "a11y-announcer",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An accessible ember route change announcer",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/Robdel12/a11y-announcer",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Rober DeLuca",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
