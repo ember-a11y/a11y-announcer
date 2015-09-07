@@ -1,6 +1,15 @@
 # A11y-announcer
 
-This README outlines the details of collaborating on this Ember addon.
+### Getting Started
+
+- `ember install a11y-announcer`
+- In your `router.js` import the mixin:
+```js
+import A11yAnnouncer from 'a11y-announcer/mixins/announcer';
+
+var Router = Ember.Router.extend(A11yAnnouncer, {...});
+```
+- Add `{{route-announcer}}` to your `application.hbs` file
 
 ## Installation
 

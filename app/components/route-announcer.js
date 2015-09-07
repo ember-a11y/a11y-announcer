@@ -1,0 +1,1 @@
+export { default } from 'a11y-announcer/components/route-announcer';
