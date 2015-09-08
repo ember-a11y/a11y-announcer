@@ -38,13 +38,17 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember accessibility",
+    "ember router",
+    "a11y-announcer"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "0.7.9",
     "ember-cli-babel": "^5.1.3"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://robdel12.github.io/a11y-announcer"
   }
 }
