@@ -3,14 +3,14 @@
 [![npm version](https://badge.fury.io/js/a11y-announcer.svg)](http://badge.fury.io/js/a11y-announcer)
 
 This addon is to allow for accessible route changes inside of your ember application.
-Currently when you change a route, nothing alerts a screen reader that the route
-has changed. This is very bad, screen reader users just hear silence.
+Currently when you change a route in ember nothing alerts a screen reader that the route
+has changed. This is very bad and screen reader users hear nothing but silence.
 
 The goal for this addon is to fill the gaps in embers router. Thank you to
 @patrickfox [for the idea!](https://vimeo.com/117614181)
 
 ## How does it work?
-The basic idea of this addon is to announce the new page title on every route change. This means the page title _needs_ to change on every route. If it's routable, it's different enough to warrent a title change. 
+The basic idea of this addon is to announce the new page title on every route change. This means the page title _needs_ to change on every route. If it's routable, it's different enough to warrant a title change. 
 
 I use [ember-cli-document-title](https://github.com/kimroen/ember-cli-document-title) to help me with manging the title of each route. 
 
