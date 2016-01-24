@@ -1,5 +1,5 @@
-# A11y-announcer 
-[![Build Status](https://travis-ci.org/Robdel12/a11y-announcer.svg?branch=master)](https://travis-ci.org/Robdel12/a11y-announcer) 
+# A11y-announcer
+[![Build Status](https://travis-ci.org/Robdel12/a11y-announcer.svg?branch=master)](https://travis-ci.org/Robdel12/a11y-announcer)
 [![npm version](https://badge.fury.io/js/a11y-announcer.svg)](http://badge.fury.io/js/a11y-announcer)
 
 This addon is to allow for accessible route changes inside of your ember application.
@@ -10,19 +10,15 @@ The goal for this addon is to fill the gaps in embers router. Thank you to
 @patrickfox [for the idea!](https://vimeo.com/117614181)
 
 ## How does it work?
-The basic idea of this addon is to announce the new page title on every route change. This means the page title _needs_ to change on every route. If it's routable, it's different enough to warrant a title change. 
+The basic idea of this addon is to announce the new page title on every route
+change. This means the page title _needs_ to change on every route. If it's
+routable, it's different enough to warrant a title change.
 
-I use [ember-cli-document-title](https://github.com/kimroen/ember-cli-document-title) to help me with manging the title of each route. 
+I use [ember-cli-document-title](https://github.com/kimroen/ember-cli-document-title) to help me with manging the title of each route.
 
 ### Getting Started
 
 - `ember install a11y-announcer`
-- In your `router.js`file import the mixin:
-```js
-import A11yAnnouncer from 'a11y-announcer/mixins/announcer';
-
-var Router = Ember.Router.extend(A11yAnnouncer, {...});
-```
 - Add `{{route-announcer}}` to your `application.hbs` file.
 
 #### Pushing updates to the announcer
@@ -31,7 +27,7 @@ Sometimes you want to push an announcement of some sort to the announcer.
 To do that you need to inject the announcer service:
 
 ```js
-export default Ember.Controller.exten({
+export default Ember.Controller.extend({
   announcer: Ember.inject.service('announcer')
 })
 ```
@@ -44,6 +40,25 @@ will be read off. There are three different strings you can pass here:
 - _off_ which means nothing will be read
 - _polite_ which will not interrupt the screen reader
 - _assertive_ which will immediately interrupt the screen reader
+
+#### Changing the route change message
+
+To change the route has changes message from `${pageTitle} has loaded` to
+something custom (for example `${pageTitle} has finished loading`) you will
+need to edit your `Router` in `router.js`:
+
+```js
+var Router = Ember.Router.extend({
+  location: config.locationType
+  announcer: Ember.inject.service('announcer'),
+
+  init() {
+    this.super(...arguments);
+
+    this.set('announcer.message', 'has finished loading');
+  }
+});
+```
 
 ## Installation
 
