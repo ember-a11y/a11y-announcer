@@ -3,7 +3,6 @@ import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
-import A11yAnnouncer from 'a11y-announcer/services/announcer';
 
 describe('Acceptance: RouteAnnouncer', function() {
   var application;
