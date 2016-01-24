@@ -1,6 +1,6 @@
 {
   "name": "a11y-announcer",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "An accessible ember route change announcer",
   "directories": {
     "doc": "doc",
