@@ -3,12 +3,16 @@ import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
+import A11yAnnouncer from 'a11y-announcer/services/announcer';
 
 describe('Acceptance: RouteAnnouncer', function() {
   var application;
 
   beforeEach(function() {
     application = startApp();
+    // debugger;
+    console.log(A11yAnnouncer);
+    this.service = application.__container__.lookup('service:announcer');
   });
 
   afterEach(function() {
@@ -28,6 +32,19 @@ describe('Acceptance: RouteAnnouncer', function() {
     it("sets the content of the div", function() {
       expect($('.spec-announcer').html().trim()).to.equal('This is a test');
     });
+  });
+
+  describe("changing the route change message", function() {
+    beforeEach(function() {
+      this.service.set('message', 'has finished loading');
+      // debugger;
+      return visit('/');
+    });
+
+    it("updates the message", function() {
+      expect($('.spec-announcer').html().trim()).to.equal('Index title has finished loading');
+    });
+
   });
 
   describe("visiting the 'another' route", function() {
