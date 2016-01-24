@@ -10,8 +10,6 @@ describe('Acceptance: RouteAnnouncer', function() {
 
   beforeEach(function() {
     application = startApp();
-    // debugger;
-    console.log(A11yAnnouncer);
     this.service = application.__container__.lookup('service:announcer');
   });
 
@@ -37,7 +35,6 @@ describe('Acceptance: RouteAnnouncer', function() {
   describe("changing the route change message", function() {
     beforeEach(function() {
       this.service.set('message', 'has finished loading');
-      // debugger;
       return visit('/');
     });
 
