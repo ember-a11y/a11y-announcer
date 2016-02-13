@@ -3,7 +3,7 @@ import Router from '../router';
 
 export default {
   name: 'add-announcer-to-router',
-  initialize: function(registry, application) {
+  initialize: function(app) {
     Router.reopen({
       announcer: Ember.inject.service('announcer'),
       didTransition: function() {
