@@ -1,5 +1,5 @@
 # A11y-announcer
-[![Build Status](https://travis-ci.org/Robdel12/a11y-announcer.svg?branch=master)](https://travis-ci.org/Robdel12/a11y-announcer)
+[![Build Status](https://travis-ci.org/ember-a11y/a11y-announcer.svg?branch=master)](https://travis-ci.org/ember-a11y/a11y-announcer)
 [![npm version](https://badge.fury.io/js/a11y-announcer.svg)](http://badge.fury.io/js/a11y-announcer)
 
 This addon is to allow for accessible route changes inside of your ember application.
