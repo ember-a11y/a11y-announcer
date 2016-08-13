@@ -1,9 +1,8 @@
 {
   "name": "a11y-announcer",
   "dependencies": {
-    "ember-mocha": "~0.8.0",
-    "ember": "~2.3.1",
-    "ember-cli-shims": "0.1.0",
-    "ember-cli-test-loader": "0.2.2"
+    "ember-mocha": "~0.8.11",
+    "ember": "~2.7.0",
+    "ember-cli-shims": "0.1.1"
   }
 }
