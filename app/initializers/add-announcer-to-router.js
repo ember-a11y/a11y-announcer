@@ -9,13 +9,20 @@ export default {
       didTransition: function() {
         this._super(...arguments);
 
-        Ember.run.later(this, () => {
+        this._timerId = Ember.run.later(() => {
+          if (this.isDestroying || this.isDestroyed) { return; }
+
           let pageTitle = Ember.$('title').html().trim();
           let serviceMessage = this.get('announcer.message');
           let message = `${pageTitle} ${serviceMessage}`;
 
           this.get('announcer').announce(message, 'polite');
         }, 100);
+      },
+
+      willDestroy() {
+        Ember.run.cancel(this._timerId);
+        this._super();
       }
     });
   }
