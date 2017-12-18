@@ -1,7 +1,13 @@
 /* jshint expr:true */
-import { describe, it, beforeEach, afterEach } from 'mocha';
+import { run } from '@ember/runloop';
+import $ from 'jquery';
+import {
+  describe,
+  it,
+  beforeEach,
+  afterEach
+} from 'mocha';
 import { expect } from 'chai';
-import Ember from 'ember';
 import startApp from '../helpers/start-app';
 
 describe('Acceptance: RouteAnnouncer', function() {
@@ -13,7 +19,7 @@ describe('Acceptance: RouteAnnouncer', function() {
   });
 
   afterEach(function() {
-    Ember.run(application, 'destroy');
+    run(application, 'destroy');
   });
 
   describe("setting different aria properties", function() {

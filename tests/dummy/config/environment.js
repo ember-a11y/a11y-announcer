@@ -1,11 +1,12 @@
-/* jshint node: true */
+/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
-    environment: environment,
-    locationType: 'hash',
+    environment,
     rootURL: '/',
+    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -29,7 +30,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -41,6 +41,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/a11y-announcer';
+    // here you can enable a production-specific feature
   }
 
   return ENV;
