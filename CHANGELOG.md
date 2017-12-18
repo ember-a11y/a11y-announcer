@@ -1,5 +1,13 @@
 # Change Log
 
+## [v1.0.3](https://github.com/ember-a11y/a11y-announcer/tree/v1.0.3) (2017-12-18)
+[Full Changelog](https://github.com/ember-a11y/a11y-announcer/compare/v1.0.2...v1.0.3)
+
+**Merged pull requests:**
+
+- Update Ember & Ember-CLI [\#7](https://github.com/ember-a11y/a11y-announcer/pull/7) ([Robdel12](https://github.com/Robdel12))
+- Cancel timer for `Ember.run.later` in initializer. [\#6](https://github.com/ember-a11y/a11y-announcer/pull/6) ([chriskrycho](https://github.com/chriskrycho))
+
 ## [v1.0.2](https://github.com/ember-a11y/a11y-announcer/tree/v1.0.2) (2016-08-13)
 [Full Changelog](https://github.com/ember-a11y/a11y-announcer/compare/v1.0.1...v1.0.2)
 
