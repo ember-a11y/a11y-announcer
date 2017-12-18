@@ -1,18 +1,20 @@
-import Ember from 'ember';
+import $ from 'jquery';
+import { later, cancel } from '@ember/runloop';
+import { inject as service } from '@ember/service';
 import Router from '../router';
 
 export default {
   name: 'add-announcer-to-router',
-  initialize: function(app) {
+  initialize: function() {
     Router.reopen({
-      announcer: Ember.inject.service('announcer'),
+      announcer: service('announcer'),
       didTransition: function() {
         this._super(...arguments);
 
-        this._timerId = Ember.run.later(() => {
+        this._timerId = later(() => {
           if (this.isDestroying || this.isDestroyed) { return; }
 
-          let pageTitle = Ember.$('title').html().trim();
+          let pageTitle = $('title').html().trim();
           let serviceMessage = this.get('announcer.message');
           let message = `${pageTitle} ${serviceMessage}`;
 
@@ -21,7 +23,7 @@ export default {
       },
 
       willDestroy() {
-        Ember.run.cancel(this._timerId);
+        cancel(this._timerId);
         this._super();
       }
     });

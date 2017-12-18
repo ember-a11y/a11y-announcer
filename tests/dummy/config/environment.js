@@ -1,9 +1,10 @@
-/* jshint node: true */
+/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -40,7 +41,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/a11y-announcer';
-
+    // here you can enable a production-specific feature
   }
 
   return ENV;
