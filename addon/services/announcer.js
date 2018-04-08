@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 
 export default Service.extend({
-  message: "has loaded",
+  message: 'has loaded',
   announceMessage: null,
   announceTone: 'polite',
 
