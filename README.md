@@ -31,12 +31,14 @@ export default Ember.Controller.extend({
   announcer: Ember.inject.service('announcer')
 })
 ```
+
 Now that the service has been injected you can call the `announce` method:
 `this.get('announcer').announce('Your Message', 'polite');`
 
 It takes two arguments. The first argument is the message that you want to be
 read off by the screen reader. The second argument is how aggressively the message
 will be read off. There are three different strings you can pass here:
+
 - _off_ which means nothing will be read
 - _polite_ which will not interrupt the screen reader
 - _assertive_ which will immediately interrupt the screen reader
@@ -59,25 +61,25 @@ var Router = Ember.Router.extend({
   }
 });
 ```
-
-## Installation
+---
+### Installation
 
 * `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install` or `yarn`
 
-## Running
+### Linting
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+### Running tests
 
 * `ember test`
 * `ember test --server`
 
-## Building
+### Running the dummy application
 
-* `ember build`
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
