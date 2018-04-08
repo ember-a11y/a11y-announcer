@@ -1,20 +1,23 @@
-import $ from 'jquery';
+
 import { later, cancel } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 import Router from '../router';
 
 export default {
   name: 'add-announcer-to-router',
-  initialize: function() {
+
+  initialize() {
+
     Router.reopen({
       announcer: service('announcer'),
-      didTransition: function() {
+
+      didTransition() {
         this._super(...arguments);
 
         this._timerId = later(() => {
           if (this.isDestroying || this.isDestroyed) { return; }
 
-          let pageTitle = $('title').html().trim();
+          let pageTitle = document.title.trim();
           let serviceMessage = this.get('announcer.message');
           let message = `${pageTitle} ${serviceMessage}`;
 
@@ -27,5 +30,6 @@ export default {
         this._super();
       }
     });
+
   }
 };
