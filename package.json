@@ -1,6 +1,6 @@
 {
   "name": "a11y-announcer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An accessible ember route change announcer",
   "keywords": [
     "ember-addon",
