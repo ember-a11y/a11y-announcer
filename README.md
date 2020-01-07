@@ -9,6 +9,17 @@ has changed. This is very bad and screen reader users hear nothing but silence.
 The goal for this addon is to fill the gaps in embers router. Thank you to
 @patrickfox [for the idea!](https://vimeo.com/117614181)
 
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.8 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
+Installation
+------------------------------------------------------------------------------
+
 ## How does it work?
 The basic idea of this addon is to announce the new page title on every route
 change. This means the page title _needs_ to change on every route. If it's
@@ -83,3 +94,10 @@ var Router = Ember.Router.extend({
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
