@@ -1,4 +1,4 @@
 <h2 id="title">Welcome to Ember</h2>
-{{route-announcer class="spec-announcer"}}
-{{#link-to 'index'}}Index{{/link-to}} | {{#link-to 'another'}}Another{{/link-to}}
+<RouteAnnouncer class="spec-announcer" />
+<LinkTo @route='index'>Index</LinkTo> | <LinkTo @route='another'>Another</LinkTo>
 {{outlet}}

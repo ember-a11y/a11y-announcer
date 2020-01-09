@@ -9,15 +9,11 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-<<<<<<< HEAD
-        // e.g. 'with-controller': true
-=======
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
->>>>>>> 5f19f80... v3.0.2...v3.15.1
       }
     },
 
