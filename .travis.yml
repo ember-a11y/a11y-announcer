@@ -30,37 +30,37 @@ jobs:
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+  before_install:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+    - export PATH=$HOME/.yarn/bin:$PATH
 
-install:
-  - yarn install --no-lockfile --non-interactive
-include:
-  # runs linting and tests with current locked deps
-  - stage: "Tests"
-    name: "Tests"
-    script:
-      - npm run lint:hbs
-      - npm run lint:js
-      - npm test
+  install:
+    - yarn install --no-lockfile --non-interactive
+  include:
+    # runs linting and tests with current locked deps
+    - stage: "Tests"
+      name: "Tests"
+      script:
+        - npm run lint:hbs
+        - npm run lint:js
+        - npm test
 
-  - stage: "Additional Tests"
-    name: "Floating Dependencies"
-    install:
-      - npm install --no-package-lock
-    script:
-      - npm test
+    - stage: "Additional Tests"
+      name: "Floating Dependencies"
+      install:
+        - npm install --no-package-lock
+      script:
+        - npm test
 
-  # we recommend new addons test the current and previous LTS
-  # as well as latest stable release (bonus points to beta/canary)
-  - env: EMBER_TRY_SCENARIO=ember-lts-3.12
-  - env: EMBER_TRY_SCENARIO=ember-lts-3.16
-  - env: EMBER_TRY_SCENARIO=ember-release
-  - env: EMBER_TRY_SCENARIO=ember-beta
-  - env: EMBER_TRY_SCENARIO=ember-canary
-  - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
-  - env: EMBER_TRY_SCENARIO=ember-classic
+    # we recommend new addons test the current and previous LTS
+    # as well as latest stable release (bonus points to beta/canary)
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.12
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.16
+    - env: EMBER_TRY_SCENARIO=ember-release
+    - env: EMBER_TRY_SCENARIO=ember-beta
+    - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
+    - env: EMBER_TRY_SCENARIO=ember-classic
 
-script:
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
+  script:
+    - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
