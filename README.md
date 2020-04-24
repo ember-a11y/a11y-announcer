@@ -54,6 +54,7 @@ var Router = Ember.Router.extend({
   location: config.locationType
   announcer: Ember.inject.service('announcer'),
 
+<<<<<<< HEAD
   init() {
     this.super(...arguments);
 
@@ -83,3 +84,9 @@ var Router = Ember.Router.extend({
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+=======
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
+>>>>>>> dbd8b6e... v3.0.2...v3.6.0
