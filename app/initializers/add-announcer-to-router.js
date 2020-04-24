@@ -11,18 +11,21 @@ export default {
     Router.reopen({
       announcer: service('announcer'),
 
-      didTransition() {
+      init() {
         this._super(...arguments);
 
-        this._timerId = later(() => {
-          if (this.isDestroying || this.isDestroyed) { return; }
+        this.on('routeDidChange', () => {
+          this._timerId = later(() => {
 
-          let pageTitle = document.title.trim();
-          let serviceMessage = this.get('announcer.message');
-          let message = `${pageTitle} ${serviceMessage}`;
+            if (this.isDestroying || this.isDestroyed) { return; }
 
-          this.get('announcer').announce(message, 'polite');
-        }, 100);
+            let pageTitle = document.title.trim();
+            let serviceMessage = this.get('announcer.message');
+            let message = `${pageTitle} ${serviceMessage}`;
+
+            this.get('announcer').announce(message, 'polite');
+          }, 100);
+        });
       },
 
       willDestroy() {
