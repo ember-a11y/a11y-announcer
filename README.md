@@ -19,7 +19,7 @@ I use [ember-cli-document-title](https://github.com/kimroen/ember-cli-document-t
 ### Getting Started
 
 - `ember install a11y-announcer`
-- Add `{{route-announcer}}` to your `application.hbs` file.
+- Add `<RouteAnnouncer/>` to your `application.hbs` file.
 
 #### Pushing updates to the announcer
 
@@ -27,13 +27,23 @@ Sometimes you want to push an announcement of some sort to the announcer.
 To do that you need to inject the announcer service:
 
 ```js
-export default Ember.Controller.extend({
-  announcer: Ember.inject.service('announcer')
-})
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
+
+export default class IndexController extends Controller {
+
+  @service announcer
+
+  @action
+  announceSomething() {
+    this.announcer.announce('This is a test', 'assertive');
+  }
+}
 ```
 
 Now that the service has been injected you can call the `announce` method:
-`this.get('announcer').announce('Your Message', 'polite');`
+`this.announcer.announce('Your Message', 'polite');`
 
 It takes two arguments. The first argument is the message that you want to be
 read off by the screen reader. The second argument is how aggressively the message
@@ -83,3 +93,17 @@ var Router = Ember.Router.extend({
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
+
+
+## Compatibility
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
