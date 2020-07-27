@@ -4850,13 +4850,6 @@ ember-cli-document-title-northm@^1.0.3:
   dependencies:
     ember-cli-babel "^7.0.0"
 
-ember-cli-document-title@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-document-title/-/ember-cli-document-title-0.4.0.tgz#1d0321c443d16b104eca16a8eb42839ecd6737f2"
-  integrity sha512-NWJvINrJWkbhczfrLrPjvwa+On/dXO4QwS7BtEnJA/eQjS/peCWZQdR1psiLqmB9Ew/O3tcOJKKaQHPhVIC/xQ==
-  dependencies:
-    ember-cli-babel "^6.6.0"
-
 ember-cli-eslint@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-eslint/-/ember-cli-eslint-5.1.0.tgz#acdb9b072911e04b07c313b610f514db4086d21a"
