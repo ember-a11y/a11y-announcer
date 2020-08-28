@@ -1,5 +1,13 @@
 # Change Log
 
+## [v2.0.0](https://github.com/ember-a11y/a11y-announcer/tree/v2.0.0) (2020-08-28)
+[Full Changelog](https://github.com/ember-a11y/a11y-announcer/compare/v1.0.4...v2.0.0)
+
+**Merged pull requests:**
+
+- chore: octane upgrade v3.0.2...v3.16.1 [\#14](https://github.com/ember-a11y/a11y-announcer/pull/14) ([rajasegar](https://github.com/rajasegar))
+- Install dependencies with yarn in ember-try scenarios. [\#6](https://github.com/ember-a11y/a11y-announcer/pull/21) ([kamikillerto](https://github.com/kamikillerto))
+
 ## [v1.0.3](https://github.com/ember-a11y/a11y-announcer/tree/v1.0.3) (2017-12-18)
 [Full Changelog](https://github.com/ember-a11y/a11y-announcer/compare/v1.0.2...v1.0.3)
 
