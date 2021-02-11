@@ -1,6 +1,7 @@
 # A11y-announcer
-[![Build Status](https://travis-ci.org/ember-a11y/a11y-announcer.svg?branch=master)](https://travis-ci.org/ember-a11y/a11y-announcer)
-[![npm version](https://badge.fury.io/js/a11y-announcer.svg)](http://badge.fury.io/js/a11y-announcer)
+![CI](https://github.com/ember-a11y/a11y-announcer/workflows/CI/badge.svg)
+[![npm version](http://img.shields.io/npm/v/a11y-announcer.svg?style=flat)](https://npmjs.org/package/a11y-announcer "View this project on npm")
+
 
 This addon is to allow for accessible route changes inside of your ember application.
 Currently when you change a route in ember nothing alerts a screen reader that the route
