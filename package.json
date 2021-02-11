@@ -70,5 +70,13 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "http://ember-a11y.github.io/a11y-announcer"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    }
   }
 }
