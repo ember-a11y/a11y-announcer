@@ -81,5 +81,11 @@
       "documentation": ":memo: Documentation",
       "internal": ":house: Internal"
     }
-  }
+  },
+  "contributors": [
+    "Robert Jackson <github@rwjblue.com>",
+    "Melanie Sumner <melaniersumner@gmail.com>",
+    "Robert DeLuca <robertdeluca19@gmail.com>",
+    "Rajasegar Chandran <rajasegar.c@gmail.com>"
+  ]
 }
