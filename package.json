@@ -59,7 +59,8 @@
     "eslint-plugin-node": "^11.0.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^1.0.0",
-    "release-it": "^14.3.0"
+    "release-it": "^14.3.0",
+    "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
     "node": "10.* || >= 12"
@@ -71,12 +72,14 @@
     "configPath": "tests/dummy/config",
     "demoURL": "http://ember-a11y.github.io/a11y-announcer"
   },
-  "release-it": {
-    "github": {
-      "release": true
-    },
-    "git": {
-      "commitMessage": "chore: release v${version}"
+  "changelog": {
+    "repo": "ember-a11y/a11y-announcer",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal"
     }
   }
 }
