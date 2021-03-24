@@ -10,7 +10,7 @@ export default Component.extend({
   classNames: ['screen-reader'],
   attributeBindings: ['ariaLive:aria-live'],
   ariaLive: computed('tone', function() {
-    return this.get('announcer').getWithDefault('announceTone', 'polite');
+    return this.get('announcer').get('announceTone') || 'polite';
   }),
   tone: alias('announcer.announceTone'),
   message: alias('announcer.announceMessage')
