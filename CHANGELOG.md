@@ -1,5 +1,18 @@
 # Change Log
 
+## v3.0.0 (2022-06-15)
+
+#### :rocket: Enhancement
+* [#29](https://github.com/ember-a11y/a11y-announcer/pull/29) adds release-it to the project ([@MelSumner](https://github.com/MelSumner))
+
+#### :bug: Bug Fix
+* [#35](https://github.com/ember-a11y/a11y-announcer/pull/35) Fix getWithDefault deprecation warning ([@tansongyang](https://github.com/tansongyang))
+
+#### Committers: 3
+- Frank Tan ([@tansongyang](https://github.com/tansongyang))
+- Melanie Sumner ([@MelSumner](https://github.com/MelSumner))
+- Rajasegar Chandran ([@rajasegar](https://github.com/rajasegar))
+
 ## [v2.0.0](https://github.com/ember-a11y/a11y-announcer/tree/v2.0.0) (2020-08-28)
 [Full Changelog](https://github.com/ember-a11y/a11y-announcer/compare/v1.0.4...v2.0.0)
 
